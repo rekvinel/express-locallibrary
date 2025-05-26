@@ -9,10 +9,12 @@
     "luxon": "^3.6.1",
     "mongodb": "^6.14.2",
     "mongoose": "^8.12.1",
-    "node": "^20.17.0",
     "pug": "^3.0.3"
     
   },
+  "engines": {
+  "node": "20.17.0"
+},
   "scripts": {
     "start": "node app.js"
   }
