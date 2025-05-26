@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+
+  form(method='POST', action='/catalog/genre/create')
+    div.form-group
+      label(for='name') Назва жанру:
+      input#name.form-control(
+        type='text',
+        name='name',
+        required,
+        placeholder='Наприклад, Драма',
+        value=(genre && genre.name ? genre.name : '')
+      )
+
+    button.btn.btn-primary(type='submit') Зберегти
+
+  if errors
+    ul.text-danger
+      each error in errors
+        li= error.msg
